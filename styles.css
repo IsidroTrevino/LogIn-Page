@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url('./resources/fonts/Norse-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    border: 0.5px solid blue;
+}
+
+:root {
+    --logo-font: 'Norse-Bold', sans-serif;
+    --bg-color-leaves: #596D48;
+    --img-width: 22rem;
+    --logo-height: 100px;
+    --text-container-padding: 70px;
+    --login-padding: 30px;
+    --text-container-height: calc(var(--logo-height) + 150px - var(--text-container-padding));
+    background-color: rgb(21, 21, 21);
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #efefef;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 0;
+}
+
+.image-container {
+    width: var(--img-width);
+    height: 100vh;
+    background-image: url(./resources/images/leaves.jpg);
+    background-size: cover;
+}
+
+.background {
+    position: relative;
+    top: 150px;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.logo-container {
+    display: flex;
+    font-family: var(--logo-font);
+    font-size: 4rem;
+    align-items: center;
+    justify-content: center;
+    height: var(--logo-height);
+}
+
+.logo-container img {
+    height: calc(var(--logo-height) - 20px);
+}
+
+.logo-container span {
+    color: white;
+    height: auto;
+    padding-top: 20px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: calc(100% - var(--img-width));
+}
+
+.login-container > div {
+    padding-left: var(--login-padding);
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: var(--text-container-padding);
+    align-items: left;
+    height: var(--text-container-height);
+}
+
+.text-container p {
+    width: 470px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-weight: 1000;
+    font-size: clamp(10px, 15px, 20px)
+}
+
+.form-container {
+    display: flex; 
+    flex-direction: column;
+    height: calc(100vh - var(--text-container-height)*2 - 90px);
+    background-color: #ffffff;
+    box-shadow: -2px 5px 15px -2px rgb(103, 102, 102);
+}
+
+
+.form-container label{
+    font-size: 0.7rem;
+}
+
+.footer {
+    height: calc(var(--text-container-height) + var(--text-container-padding) - 150px);
+}
