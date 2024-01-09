@@ -6,4 +6,202 @@
     font-weight: normal;
     font-style: normal;
 }
+:root {
+    --logo-top: 24%;
+    --content-font: 'Roboto', sans-serif;
+    --logo-font: 'Norse-Bold', sans-serif;
+    --button-color: #596D48;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    min-height: 890px;
+    min-width: 1200px;
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding: 0;
+    background-color: rgb(31, 31, 31);
+}
+
+.container {
+    height: max(890px, 100vh);
+    width: max(1200px, 70%);
+    display: flex;
+    background-color: #fff;
+  }
+  
+.image-container {
+    height: 100%;
+    width: clamp(420px, 35%, 35vw);
+    background-image: url(./resources/images/leaves.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+.logo-container {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--logo-font);
+    top: var(--logo-top);
+    display: flex;
+    gap: 2%;
+    height: 120px;
+    font-size: 6em;
+    width: 100%;
+    background-color: rgb(0, 0, 0,0.5);
+}
+
+
+.content {
+    width: 65%;
+    background-color: #e9e9e9;
+    font-size: 1.5rem;
+    font-family: var(--content-font);
+    display: flex;
+    flex-direction: column;
+  }
+
+.content > div {
+    padding-left: 3rem;
+}
+
+  .content .text-content {
+    height: calc(var(--logo-top) + 120px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    padding-bottom: 50px;
+  }
+
+  
+  .content .text-content p {
+      position: relative;
+      top: 140px;
+      width: 70%;
+      font-weight: bolder;
+    }
+
+    .content .input-container {
+        flex: 1;
+    }
+    
+.content .input-container {
+    color: black;
+    background-color: white;
+    margin-top: 80px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: 0 5px 5px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content .input-container label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1px;
+}
+
+.input-container input{
+    box-sizing: border-box;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: 100%;
+    font-size: 1rem;
+    margin-right: 32px;
+}
+
+.input-container h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  .inputs > div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 84px;
+    row-gap: 18px;
+    margin-bottom: 18px;
+    padding: 5px;
+  }
+
+  .inputs label {
+    display: block;
+    font-weight: 600;
+  }
+
+.submit {
+    flex: 1;
+    padding-top: 40px;
+}
+
+.submit p {
+    margin-top: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: 600;
+}
+
+button {
+    width: 200px;
+    height: 55px;
+    position: relative;
+    margin-left: 48px;
+    top: 50px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    font-family: var(--content-font);
+    background-color: var(--button-color);
+}
+
+input.error {
+    border: 1px solid red;
+}
+
+input.focus {
+    border: 1px solid blue;
+    box-shadow: 2px 1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+input:hover {
+    background-color: #e9e9e9;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.logo-container span{
+    color: white;
+    height: 80%;
+    margin: 0;
+}
+ 
+.logo-container img{
+    height: 110px;
+}
